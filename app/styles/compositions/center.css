@@ -1,6 +1,0 @@
-.center {
-  box-sizing: content-box;
-  margin-inline: auto;
-  inline-size: 100%;
-  max-inline-size: var(--measure);
-}
