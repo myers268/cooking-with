@@ -1,0 +1,110 @@
+@import "custom-props.css";
+@import "fonts.css";
+@import "reset.css";
+
+@tailwind components;
+
+@layer components {
+  .border-dark {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(15 23 42 / 1);
+  }
+}
+
+/* Global styles */
+body {
+  @apply bg-light text-slate-700 text-base font-sans;
+}
+
+body > * {
+  padding: var(--space-s);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+h3 {
+  @apply text-lg;
+}
+
+p,
+li {
+  max-width: 70ch;
+}
+
+h1 {
+  max-width: 15ch;
+}
+
+h2,
+h3 {
+  max-width: 30ch;
+}
+
+a {
+  color: currentcolor;
+  text-decoration-color: var(--color-primary);
+
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 100ms ease-in-out;
+}
+
+a:hover, a:focus {
+  text-decoration-color: theme("colors.teal.400");
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  @apply border-dark rounded-md;
+  @apply transition-colors delay-100 ease-in-out;
+}
+
+button:hover, button:focus {
+  @apply bg-secondary-base;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+select {
+  outline: none;
+  @apply ring-1 ring-slate-900 outline-none;
+  @apply border-dark rounded-md;
+}
+
+/* Prose */
+h2,
+h3 {
+  --flow-space: var(--space-size-3);
+}
+
+h2 + *,
+h3 + * {
+  --flow-space: var(--space-base);
+}
+
+/* So text scale renders nicely */
+div[class*="text-"] {
+  --flow-space: 1rem;
+  line-height: 1;
+  font-weight: 700;
+}

@@ -1,0 +1,40 @@
+{
+  "name": "remix-template-fly",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
+  "scripts": {
+    "build": "remix build",
+    "deploy": "fly deploy --remote-only",
+    "dev": "remix dev",
+    "start": "remix-serve build",
+    "info": "flyctl info",
+    "watch:css": "postcss styles --base styles --dir app/styles -w",
+    "build:css": "postcss styles --base styles --dir app/styles --env production"
+  },
+  "dependencies": {
+    "@remix-run/node": "^1.3.4",
+    "@remix-run/react": "^1.3.4",
+    "@remix-run/serve": "^1.3.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tiny-invariant": "^1.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.3.4",
+    "@remix-run/eslint-config": "^1.3.4",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@types/tailwindcss": "^3.0.10",
+    "eslint": "^8.11.0",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "postcss-partial-import": "^4.1.0",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.5.5"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
